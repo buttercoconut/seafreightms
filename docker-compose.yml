@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: "3.8"
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8001:8001"
+  cargo-service:
+    build: ./cargo-service
+    ports:
+      - "8000:8000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
